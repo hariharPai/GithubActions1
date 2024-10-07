@@ -3,8 +3,8 @@ on: workflow_dispatch
 jobs:
     MyFirstJob:
            runs-on: ubuntu-latest
-    steps: 
+           steps: 
            - name: Clone Repo
-              run: echo "Clonning the repo"
-           - name: Compile Repo
-              run: echo "compiling buyer"
+             run: echo "Clonning the repo"
+           - name: Compile Repo  
+             run: echo "compiling buyer"
