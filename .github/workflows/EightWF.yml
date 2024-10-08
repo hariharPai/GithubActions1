@@ -1,0 +1,14 @@
+name: eightWorkFlow
+on: push
+jobs:
+ buildJob:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Get Code
+      uses: actions/checkout@v4
+    - name: run code
+      run: python greetings.py
+    - uses: actions/upload-artifact@v4
+      with:
+        name: my-artifact
+        path: greeting.txt
