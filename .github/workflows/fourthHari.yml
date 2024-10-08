@@ -1,0 +1,14 @@
+name: fourthHari_workflow
+on: [push, workflow_dispatch]
+jobs:
+  firstJob:
+    runs-on: ubuntu-latest
+    env:
+      DAY_OF_WEEK: friday
+    steps:
+      - name: run env
+        run: echo "${{ toJSON(github) }}"
+      - name: dayofweek
+        run: echo "${{ env.DAY_OF_WEEK }}"
+   
+ 
