@@ -1,5 +1,5 @@
 name: eightWorkFlow
-on: push
+on: [push , workflow_dispatch]
 jobs:
  buildJob:
   runs-on: ubuntu-latest
@@ -10,7 +10,7 @@ jobs:
       run: python greetings.py
     - uses: actions/upload-artifact@v4
       with:
-        name: my-artifact
+        name: my-artifact1
         path: greeting.txt
  deployJob:
    needs: buildJob
@@ -18,7 +18,7 @@ jobs:
    steps:
      - uses: actions/download-artifact@v3
        with:
-        name: my-artifact
+        name: my-artifact1
      - name: run code
        run: |
             ls -lrt
