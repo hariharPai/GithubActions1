@@ -1,7 +1,7 @@
 name: second_workflow
 on: push
 jobs:
-  test:
+  firstJob:
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
@@ -10,3 +10,13 @@ jobs:
         run: python calculator.py add 5 3
       - name: run tests
         run: python3 -m unittest test_calculator.py
+  secondJob: 
+     runs-on: ubuntu-latest
+     steps:
+      - name: Get Code
+        run: echo "getting the code"
+      - name: run code
+        run:  echo "running the code"
+      - name: run tests
+        run: echo "running the tests"
+
