@@ -1,0 +1,17 @@
+name: seventh_workflow
+on: 
+ pull_request:
+   types:
+      - opened
+      - edited
+   branches: 
+     - main
+     - "dev-*"
+     - "important/**"
+jobs:
+  firstJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run code
+        run: echo "I am triggered by pull request"
+
