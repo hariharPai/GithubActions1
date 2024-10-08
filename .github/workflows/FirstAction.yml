@@ -5,4 +5,6 @@ jobs:
    runs-on: ubuntu-latest
    steps:
       - name: clone repo
-        run: echo "Clone the command"
+        run: |
+          echo "Clone the command"
+          echo "Clone the command 2"
