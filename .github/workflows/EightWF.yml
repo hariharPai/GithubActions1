@@ -12,3 +12,15 @@ jobs:
       with:
         name: my-artifact
         path: greeting.txt
+ deployJob:
+   needs: buildJob
+   runs-on: ubuntu-latest
+   steps:
+     - uses: actions/download-artifact@v3
+       with:
+        name: my-artifact
+     - name: run code
+       run: |
+            ls -lrt
+            cat greeting.txt
+
