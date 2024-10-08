@@ -1,6 +1,6 @@
 import datetime
 
-# Define the file name
+# Define the file name new pull
 file_name = "greeting.txt"
 
 # Get the current date and time
