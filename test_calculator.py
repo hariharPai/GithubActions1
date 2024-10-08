@@ -16,7 +16,7 @@ class TestCalculator(unittest.TestCase):
 
     def test_multiplication(self):
         result = subprocess.check_output(['python', 'calculator.py', 'multiply', '5', '3'])
-        self.assertEqual(float(result.strip()), 153.0)
+        self.assertEqual(float(result.strip()), 15.0)
 
     def test_division(self):
         result = subprocess.check_output(['python', 'calculator.py', 'divide', '6', '3'])
