@@ -16,7 +16,7 @@ def divide(x, y):
         return "Error! Division by zero."
 
 if len(sys.argv) != 4:
-    print("Usage: python calculator.py operation num1 num2")
+    print("Usage: python  ii calculator.py operation num1 num2")
     sys.exit(1)
 
 operation = sys.argv[1]
